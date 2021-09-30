@@ -39,6 +39,70 @@
     </nav>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequatur fugiat aspernatur rem nobis blanditiis harum! Corrupti nesciunt temporibus necessitatibus voluptate iusto perspiciatis sunt facilis amet, ratione aliquam inventore. Placeat.</p>
+    <h1 class="formTitle">Formulaire de réservation</h1>
+      <div class="form">
+    <form  action="" method="get">
+      
+      <div class="personInfo">
+        <label for="name">Votre nom</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Nom et Prénom"
+          required
+        />
+      </div>
+      <div class="personInfo">
+        <label for="email">Votre email</label>
+        <input
+          type="email"
+          placeholder="crazydev@wild.com"
+          required
+        />
+      </div>
+      <div class="personInfo">
+        <label for="phone">Your Phone</label>
+        <input
+          type="tel"
+          placeholder="0698765432"
+          required
+        />
+      </div>
+<div class="timeChoice">
+      <label>Arrêt de départ</label>
+      <select>
+        <option value="">Arrêt de départ</option>
+        <option>Arret A</option>
+        <option>Arret B</option>
+        <option>Arret C</option>
+        <option>Arret D</option>
+        <option>Arret E</option>
+      </select>
+      <label>Arrêt d'arriver</label>
+      <select>
+        <option value="">Arrêt d'arriver</option>
+        <option>Arret A</option>
+        <option>Arret B</option>
+        <option>Arret C</option>
+        <option>Arret D</option>
+        <option>Arret E</option>
+      </select>
+</div>
+      <div class="horaire">
+        <label for="departureDay">Jour de départ</label>
+        <input type="date" required />
+        <label for="departureTime">Heure de départ</label>
+        <input type="time" step="900" required />
+      </div>
+    </div>
+</form>
+<div class="reservationButton">
+      <button type="submit">Réserver</button>
+</div>
+
+<script src='script.js'></script>
+    
     <script src="script.js"></script>
   </body>
 </html>
