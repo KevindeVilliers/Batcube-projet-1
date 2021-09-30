@@ -122,9 +122,8 @@ img {max-width:100%;}
   color:#bfab34;
 }
 
-.form {
+#formReservation {
   display: flex;
-  
   align-items: center;
   flex-direction: column;
 }
