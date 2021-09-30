@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: #444f6b;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
+  color: #bfab34;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+}
+p{
+  width: 50px;
+}
+.batLogo {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  padding: .5rem;
+}
+
+img {max-width:100%;}
+
+.navbarLinks{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.navbarLinks ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.navbarLinks li {
+  list-style: none;
+}
+
+.navbarLinks li a {
+  text-decoration: none;
+  padding: 1rem;
+  color: #bfab34;
+}
+
+.navbarLinks li:hover {
+  list-style: none;
+}
+
+.burgerButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.burgerButton .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #bfab34;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .burgerButton {
+    display: flex;
+  }
+
+  .batLogo{
+    display: block;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  }
+
+  .navbarLinks {
+    width: 100%;
+    display: none;
+  }
+
+  .navbar{
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbarLinks ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbarLinks li {
+    padding: 5px;
+    text-align: center;
+  }
+
+  .navbarLinks li a {
+    padding: 1rem 1rem;
+  }
+
+  .navbarLinks.active{
+    display: flex;
+  }
+}
+
+.formTitle {
+  text-align: center;
+  color:#bfab34;
+}
+
+.form {
+  display: flex;
+  
+  align-items: center;
+  flex-direction: column;
+}
+
+.horaire, .personInfo, .timeChoice {
+ 
+    display: flex;
+    background-color: #a1a7b5;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.reservationButton{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
