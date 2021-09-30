@@ -13,3 +13,10 @@ console.log(reservationButtonJS);
 reservationButtonJS[0].addEventListener('click', () => {
     alert('trajet réservé !');
 });
+
+const buttonContact = document.querySelector(".buttonContactStyle");
+
+buttonContact.addEventListener("click", function(){
+    buttonContact.href = "#";
+    buttonContact.value ="Sent !"; 
+})
