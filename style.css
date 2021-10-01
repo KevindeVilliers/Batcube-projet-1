@@ -143,7 +143,7 @@ img {
 
 /* Début caroussel */
 
-div#slider {
+#slider {
   width: 100%;
 }
 
@@ -233,27 +233,6 @@ div#slider {
 
 .navigation-auto div:not(:last-child) {
   margin-right: 40px;
-}
-
-#radio1:checked ~ .navigation-auto .auto-btn1 {
-  background: #b6ab35;
-}
-
-#radio2:checked ~ .navigation-auto .auto-btn2 {
-  background: #b6ab35;
-}
-
-#radio3:checked ~ .navigation-auto .auto-btn3 {
-  background: #b6ab35;
-}
-
-#radio4:checked ~ .navigation-auto .auto-btn4 {
-  background: #b6ab35;
-}
-@media only screen and (max-width: 480px) {
-  img {
-    width: 100%;
-  }
 }
 
 @media only screen and (max-width: 480px) {
