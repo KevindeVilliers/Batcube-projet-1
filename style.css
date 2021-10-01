@@ -1,0 +1,207 @@
+body{
+    background-color: #4F5053;
+}
+h2, h3, p, li, div{
+    color: #AE9606;
+}
+a {
+    color: red;
+}
+/*-------------------PARTIE ESCALES--------------------*/
+
+#escales{
+    display : flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    /*border : solid black 2px;*/
+}
+
+
+/* PARTIE LIGNE DE METRO */
+
+#escaleMap{/*container*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 500px;
+    /*border : solid red 1px;*/
+    
+}
+
+#escaleLine{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    width: 0;
+    height: 400px;
+    border: solid #AE9606 2px;
+    
+}
+
+#pointContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    height: 360px;
+ 
+}
+
+.escalePoint{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #AE9606;
+
+}
+.escalePoint:hover{
+    width: 46px;
+    height: 46px;
+    background-color: lightgoldenrodyellow;
+    border: solid #AE9606 2px;
+}
+
+#titleHoverContainer{/*container*/
+    display: none;
+    width: 10%;
+    height: 500px;
+    /*border: solid green 1px;*/
+    text-align: center;
+
+}
+.escaleTitle{
+    position: relative;
+    width: 20%;
+    height: 20%;
+}
+
+#stalingradTitle{
+    top : 5%;
+}
+
+#quinconcesTitle{
+    top: 23%;
+}
+
+#hangarsTitle{
+    top: 39%;
+}
+
+#citeDuVinTitle{
+    top: 47%;
+}
+
+#lormontTitle{
+    top: 68%;
+}
+
+
+/* PARTIE TEXTE */
+
+#divEscaleText{/*container*/
+    width: 85%;
+    height: auto;
+    /*border : solid blue 1px;*/
+    
+}
+
+.escaleTitle{
+    display: none;
+}
+
+.escaleText{
+    display: none;
+}
+
+.googleMap{
+    display: block;
+    width : 300px;
+    height : 450px;
+}
+
+
+@media screen and (min-width: 700px) {
+    #escales{
+        display: block;
+    }
+
+/* PARTIE LIGNE DE METRO */
+
+    #escaleMap{/*container*/
+        display : flex;
+        width: 100%;
+        height: 100px;
+        
+    }
+
+    #escaleLine{
+        width : 90%;
+        height: 0;
+        margin : auto;
+    }
+
+    #pointContainer{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+        width: 90%;
+        height: 0;
+        
+    }
+
+    .escalePoint{
+        margin: 0;
+    }
+
+    #titleHoverContainer{/*container*/
+        display: block;
+        width: 100%;
+        height: 50px
+    }
+
+    .escaleTitle{
+        width: 20%;
+    }
+    
+    #stalingradTitle{
+        top: 0;
+        left: 1.5%;
+    }
+    
+    #quinconcesTitle{
+        top: 0;
+        left : 21%;
+    }
+    
+    #hangarsTitle{
+        top:0;
+        left : 40.5%;
+    }
+
+    #citeDuVinTitle{
+        top:0;
+        left: 59%;
+    }
+
+    #lormontTitle{
+        top:0;
+        left: 78.5%;
+    }
+
+/* PARTIE TEXTE */
+
+    #divEscaleText{ /*container*/
+        width: 100%;
+        min-height: 500px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .textOnly{
+        width: 500px;
+    }
+}
