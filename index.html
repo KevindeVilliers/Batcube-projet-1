@@ -1,153 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Batcube</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-    <script
-      src="https://kit.fontawesome.com/9603b09a10.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <nav class="navbar">
-        <div class="batLogo">
-            <img src="/src/BatCubeLogo.png" alt="batLogo" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Batcube</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-      <a href="#" class="burgerButton">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <div class="navbarLinks">
+  <script src="https://kit.fontawesome.com/9603b09a10.js" crossorigin="anonymous"></script>
+</head>
 
-        <ul>
-          <li><a href="#">Infos</a></li>
-          <li><a href="#">Itinéraire</a></li>
-          <li><a href="#">Réservation</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
+<body>
+  <nav class="navbar">
+    <div class="batLogo">
+      <img src="/src/BatCubeLogo.png" alt="batLogo" />
+    </div>
 
+    <a href="#" class="burgerButton">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbarLinks">
+
+      <ul>
+        <li><a href="#">Infos</a></li>
+        <li><a href="#">Itinéraire</a></li>
+        <li><a href="#">Réservation</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!--début carooussel-->
+  <div class="slider">
+    <div class="slides">
+      <input type="radio" name="radio-btn" id="radio1">
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+      <div class="slide first">
+
+        <img src="http://p9.storage.canalblog.com/92/25/423276/87387478_o.jpg" alt="Bat3">
       </div>
-    </nav>
+      <div class="slide">
+        <img src="https://p4.storage.canalblog.com/47/25/423276/85139338_o.jpg" alt="Bat3">
+      </div>
+      <div class="slide">
+        <img src="https://www.keolis.com/sites/default/files/thumbnails/image/ld-keolis-navette-maritime-bordeaux_0.jpg"
+          alt="Bat3">
+      </div>
+      <div class="slide">
+        <img
+          src="https://www.infotbm.com/sites/default/files/styles/heading/public/medias/images/2018-04/comment_ca_marche_0.jpg?itok=bnTUV9Fx"
+          alt="Bat3">
+      </div>
 
-    
-    <h1 class="formTitle">Formulaire de réservation</h1>
-      <div class="form" id="formReservation">
-    <form  action="" method="get">
-      
+      <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+      </div>
+    </div>
+
+    <div class="navigation-manual">
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+      <label for="radio3" class="manual-btn"></label>
+      <label for="radio4" class="manual-btn"></label>
+    </div>
+  </div>
+  <!--fin caroussel-->
+
+
+  <h1 class="formTitle">Formulaire de réservation</h1>
+  <div class="form" id="formReservation">
+    <form action="" method="get">
+
       <div class="personInfo">
         <label for="name">Votre nom</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Nom et Prénom"
-          required
-        />
+        <input type="text" id="name" name="name" placeholder="Nom et Prénom" required />
       </div>
       <div class="personInfo">
         <label for="email">Votre email</label>
-        <input
-          type="email"
-          placeholder="crazydev@wild.com"
-          required
-        />
+        <input type="email" placeholder="crazydev@wild.com" required />
       </div>
       <div class="personInfo">
         <label for="phone">Your Phone</label>
-        <input
-          type="tel"
-          placeholder="0698765432"
-          required
-        />
+        <input type="tel" placeholder="0698765432" required />
       </div>
-<div class="timeChoice">
-      <label>Arrêt de départ</label>
-      <select>
-        <option value="">Arrêt de départ</option>
-        <option>Arret A</option>
-        <option>Arret B</option>
-        <option>Arret C</option>
-        <option>Arret D</option>
-        <option>Arret E</option>
-      </select>
-      <label>Arrêt d'arriver</label>
-      <select>
-        <option value="">Arrêt d'arriver</option>
-        <option>Arret A</option>
-        <option>Arret B</option>
-        <option>Arret C</option>
-        <option>Arret D</option>
-        <option>Arret E</option>
-      </select>
-</div>
+      <div class="timeChoice">
+        <label>Arrêt de départ</label>
+        <select>
+          <option value="">Arrêt de départ</option>
+          <option>Arret A</option>
+          <option>Arret B</option>
+          <option>Arret C</option>
+          <option>Arret D</option>
+          <option>Arret E</option>
+        </select>
+        <label>Arrêt d'arriver</label>
+        <select>
+          <option value="">Arrêt d'arriver</option>
+          <option>Arret A</option>
+          <option>Arret B</option>
+          <option>Arret C</option>
+          <option>Arret D</option>
+          <option>Arret E</option>
+        </select>
+      </div>
       <div class="horaire">
         <label for="departureDay">Jour de départ</label>
         <input type="date" required />
         <label for="departureTime">Heure de départ</label>
         <input type="time" step="900" required />
       </div>
-    </div>
-</form>
-<div class="reservationButton">
-      <button type="submit">Réserver</button>
-</div>
+  </div>
+  </form>
+  <div class="reservationButton">
+    <button type="submit">Réserver</button>
+  </div>
 
-<section>
+  <section>
 
-  <h2 class="titleContact">Contact</h2>
+    <h2 class="titleContact">Contact</h2>
 
-  <div class="contact">
+    <div class="contact">
 
       <form action="" class="form">
 
-          <div class="form">
-              <label for="name">Name: </label>
-              <input type="text" name="name" id="name" size="160" maxlength="40" placeholder="Ex: Bill Gates">
-          </div>
+        <div class="form">
+          <label for="name">Name: </label>
+          <input type="text" name="name" id="name" size="160" maxlength="40" placeholder="Ex: Bill Gates">
+        </div>
 
-          <div class="form">
-              <label for="email">E-mail: </label>
-              <input type="email" name="email" id="email" size="160" maxlength="70" placeholder="@">
-          </div>
+        <div class="form">
+          <label for="email">E-mail: </label>
+          <input type="email" name="email" id="email" size="160" maxlength="70" placeholder="@">
+        </div>
 
-          <div class="form">
-              <label for="objet">Objet: </label>
-              <input type="text" name="objet" id="objet" size="160" maxlength="50" placeholder="Ex: Buy ticket">
-          </div>
+        <div class="form">
+          <label for="objet">Objet: </label>
+          <input type="text" name="objet" id="objet" size="160" maxlength="50" placeholder="Ex: Buy ticket">
+        </div>
 
-          <div class="form">
-              <label for="message">Your message: </label>
-              <textarea name="message" id="message" rows="10" cols="180" maxlength="300" placeholder="Ex: Where can I buy a ticket ?"> 
-              </textarea>    
-          </div>
+        <div class="form">
+          <label for="message">Your message: </label>
+          <textarea name="message" id="message" rows="10" cols="180" maxlength="300"
+            placeholder="Ex: Where can I buy a ticket ?">
+              </textarea>
+        </div>
 
-          <div class="form buttonContact">
-              <input type="submit" value="Send" class="buttonContactStyle">
-          </div>
+        <div class="form buttonContact">
+          <input type="submit" value="Send" class="buttonContactStyle">
+        </div>
 
-      </div>  
-    
-  </form>
+    </div>
 
-</section>
+    </form>
 
-<footer>
+  </section>
 
-  <img src="/src/WildLogo.png" alt="Logo de la Wild" class="wildLogo">
+  <footer>
 
-</footer>
+    <img src="/src/WildLogo.png" alt="Logo de la Wild" class="wildLogo">
 
-<script src='script.js'></script>
-    
-    
-  </body>
+  </footer>
+
+  <script src='script.js'></script>
+
+
+</body>
+
 </html>
