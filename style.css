@@ -537,11 +537,9 @@ label {
 
 footer {
   height: 150px;
-  margin-top: 20px;
-  background-image: linear-gradient(to top, #242424, #282e3c, #505c7c);
-}
-
-.wildLogo {
-  margin-left: 44%;
-  margin-top: 30px;
+    display: flex;
+    margin-top: 20px;
+    background-image: linear-gradient(to top, #242424, #282e3c, #505c7c);
+    justify-content: center;
+    align-items: flex-end;
 }
