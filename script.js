@@ -1,163 +1,154 @@
 //--------------NAVBAR--------------------
 
-const burgerButtonJS = document.getElementsByClassName("burgerButton")
+const burgerButtonJS = document.getElementsByClassName('burgerButton');
 console.log(burgerButtonJS);
-const navbarLinksJS = document.getElementsByClassName("navbarLinks")
+const navbarLinksJS = document.getElementsByClassName('navbarLinks');
 console.log(navbarLinksJS);
 
 burgerButtonJS[0].addEventListener('click', () => {
-        navbarLinksJS[0].classList.toggle('active')
-    });
-
-
+	navbarLinksJS[0].classList.toggle('active');
+});
 
 // ----------------------- ESCALES ------------------------
 
-
 //Mise en place des variables des classes pour comportements généralisés
-const escalePoint = document.querySelectorAll(".escalePoint");
-const escaleTitle = document.querySelectorAll(".escaleTitle");
-const escaleText = document.querySelectorAll(".escaleText");
-
+const escalePoint = document.querySelectorAll('.escalePoint');
+const escaleTitle = document.querySelectorAll('.escaleTitle');
+const escaleText = document.querySelectorAll('.escaleText');
 
 //STALINGRAD ------------------------------
 
 //Mise en place des variables propres à l'escale Stalingrad
-const stalingradDiv = document.getElementById("stalingradDiv");
-const stalingradTitle = document.getElementById("stalingradTitle");
-const stalingradText = document.getElementById("stalingradText")
+const stalingradDiv = document.getElementById('stalingradDiv');
+const stalingradTitle = document.getElementById('stalingradTitle');
+const stalingradText = document.getElementById('stalingradText');
 let stalingradIsClicked = false;
 
 //Apparition/Disparition du titre au passage de la souris
-stalingradDiv.addEventListener("mouseover", function(event){
-    stalingradTitle.style.display= "block";
+stalingradDiv.addEventListener('mouseover', function(event) {
+	stalingradTitle.style.display = 'block';
 });
-stalingradDiv.addEventListener("mouseleave", function(event){
-        stalingradTitle.style.display= "none"; 
+stalingradDiv.addEventListener('mouseleave', function(event) {
+	stalingradTitle.style.display = 'none';
 });
 
 //Apparition du titre et du texte propre à l'escale Stalingrad
-stalingradDiv.addEventListener("click", function(){
-    //Annulation des textes
-    quinconcesText.style.display= "none";
-    hangarsText.style.display= "none";
-    citeDuVinText.style.display= "none";
-    lormontText.style.display= "none";
-    //Apparitions des valeurs
-    stalingradText.style.display= "block";
+stalingradDiv.addEventListener('click', function() {
+	//Annulation des textes
+	quinconcesText.style.display = 'none';
+	hangarsText.style.display = 'none';
+	citeDuVinText.style.display = 'none';
+	lormontText.style.display = 'none';
+	//Apparitions des valeurs
+	stalingradText.style.display = 'flex';
 });
-
 
 //QUINCONCES --------------------------------
 
 //Mise en place des variables propres à l'escale Quinconces
-const quinconcesDiv = document.getElementById("quinconcesDiv");
-const quinconcesTitle = document.getElementById("quinconcesTitle");
-const quinconcesText = document.getElementById("quinconcesText")
+const quinconcesDiv = document.getElementById('quinconcesDiv');
+const quinconcesTitle = document.getElementById('quinconcesTitle');
+const quinconcesText = document.getElementById('quinconcesText');
 let quinconcesIsClicked = false;
 
 //Apparition/Disparition du titre au passage de la souris
-quinconcesDiv.addEventListener("mouseover", function(event){
-    quinconcesTitle.style.display= "block";
+quinconcesDiv.addEventListener('mouseover', function(event) {
+	quinconcesTitle.style.display = 'block';
 });
-quinconcesDiv.addEventListener("mouseleave", function(event){
-        quinconcesTitle.style.display= "none"; 
+quinconcesDiv.addEventListener('mouseleave', function(event) {
+	quinconcesTitle.style.display = 'none';
 });
 
 //Apparition du titre et du texte propre à l'escale Stalingrad
-quinconcesDiv.addEventListener("click", function(){
-
-    //Annulation des textes
-    stalingradText.style.display= "none";
-    hangarsText.style.display= "none";
-    citeDuVinText.style.display= "none";
-    lormontText.style.display= "none";
-    //Apparitions des valeurs
-    quinconcesText.style.display= "block";
+quinconcesDiv.addEventListener('click', function() {
+	//Annulation des textes
+	stalingradText.style.display = 'none';
+	hangarsText.style.display = 'none';
+	citeDuVinText.style.display = 'none';
+	lormontText.style.display = 'none';
+	//Apparitions des valeurs
+	quinconcesText.style.display = 'flex';
 });
-
 
 //HANGARS -------------------------------
 
 //Mise en place des variables propres à l'escale Hangars
-const hangarsDiv = document.getElementById("hangarsDiv");
-const hangarsTitle = document.getElementById("hangarsTitle");
-const hangarsText = document.getElementById("hangarsText")
+const hangarsDiv = document.getElementById('hangarsDiv');
+const hangarsTitle = document.getElementById('hangarsTitle');
+const hangarsText = document.getElementById('hangarsText');
 let hangarsIsClicked = false;
 
 //Apparition/Disparition du titre au passage de la souris
-hangarsDiv.addEventListener("mouseover", function(event){
-    hangarsTitle.style.display= "block";
+hangarsDiv.addEventListener('mouseover', function(event) {
+	hangarsTitle.style.display = 'block';
 });
-hangarsDiv.addEventListener("mouseleave", function(event){
-        hangarsTitle.style.display= "none"; 
+hangarsDiv.addEventListener('mouseleave', function(event) {
+	hangarsTitle.style.display = 'none';
 });
 
 //Apparition du titre et du texte propre à l'escale Stalingrad
-hangarsDiv.addEventListener("click", function(){   
-    //Annulation des textes
-    stalingradText.style.display= "none";
-    quinconcesText.style.display= "none";
-    citeDuVinText.style.display= "none";
-    lormontText.style.display= "none";
-    //Apparitions des valeurs
-    hangarsText.style.display= "block";
+hangarsDiv.addEventListener('click', function() {
+	//Annulation des textes
+	stalingradText.style.display = 'none';
+	quinconcesText.style.display = 'none';
+	citeDuVinText.style.display = 'none';
+	lormontText.style.display = 'none';
+	//Apparitions des valeurs
+	hangarsText.style.display = 'flex';
 });
-
 
 //CITE DU VIN ----------------------------
 
 //Mise en place des variables propres à l'escale Cite du vin
-const citeDuVinDiv = document.getElementById("citeDuVinDiv");
-const citeDuVinTitle = document.getElementById("citeDuVinTitle");
-const citeDuVinText = document.getElementById("citeDuVinText")
+const citeDuVinDiv = document.getElementById('citeDuVinDiv');
+const citeDuVinTitle = document.getElementById('citeDuVinTitle');
+const citeDuVinText = document.getElementById('citeDuVinText');
 let citeDuVinIsClicked = false;
 
 //Apparition/Disparition du titre au passage de la souris
-citeDuVinDiv.addEventListener("mouseover", function(event){
-    citeDuVinTitle.style.display= "block";
+citeDuVinDiv.addEventListener('mouseover', function(event) {
+	citeDuVinTitle.style.display = 'block';
 });
-citeDuVinDiv.addEventListener("mouseleave", function(event){   
-        citeDuVinTitle.style.display= "none";     
+citeDuVinDiv.addEventListener('mouseleave', function(event) {
+	citeDuVinTitle.style.display = 'none';
 });
 
 //Apparition du titre et du texte propre à l'escale Stalingrad
-citeDuVinDiv.addEventListener("click", function(){
-    //Annulation des textes
-    stalingradText.style.display= "none";
-    quinconcesText.style.display= "none";
-    hangarsText.style.display= "none";
-    lormontText.style.display= "none";
-    //Apparitions des valeurs
-    citeDuVinText.style.display= "block";
+citeDuVinDiv.addEventListener('click', function() {
+	//Annulation des textes
+	stalingradText.style.display = 'none';
+	quinconcesText.style.display = 'none';
+	hangarsText.style.display = 'none';
+	lormontText.style.display = 'none';
+	//Apparitions des valeurs
+	citeDuVinText.style.display = 'flex';
 });
-
 
 //LORMONT --------------------------------
 
 //Mise en place des variables propres à l'escale Lormont
-const lormontDiv = document.getElementById("lormontDiv");
-const lormontTitle = document.getElementById("lormontTitle");
-const lormontText = document.getElementById("lormontText")
+const lormontDiv = document.getElementById('lormontDiv');
+const lormontTitle = document.getElementById('lormontTitle');
+const lormontText = document.getElementById('lormontText');
 let lormontIsClicked = false;
 
 //Apparition/Disparition du titre au passage de la souris
-lormontDiv.addEventListener("mouseover", function(event){
-    lormontTitle.style.display= "block";
+lormontDiv.addEventListener('mouseover', function(event) {
+	lormontTitle.style.display = 'block';
 });
-lormontDiv.addEventListener("mouseleave", function(event){
-        lormontTitle.style.display= "none";
+lormontDiv.addEventListener('mouseleave', function(event) {
+	lormontTitle.style.display = 'none';
 });
 
 //Apparition du titre et du texte propre à l'escale Stalingrad
-lormontDiv.addEventListener("click", function(){
-    //Annulation des textes
-    stalingradText.style.display= "none";
-    quinconcesText.style.display= "none";
-    hangarsText.style.display= "none";
-    citeDuVinText.style.display= "none";
-    //Apparitions des valeurs
-    lormontText.style.display= "block";
+lormontDiv.addEventListener('click', function() {
+	//Annulation des textes
+	stalingradText.style.display = 'none';
+	quinconcesText.style.display = 'none';
+	hangarsText.style.display = 'none';
+	citeDuVinText.style.display = 'none';
+	//Apparitions des valeurs
+	lormontText.style.display = 'flex';
 });
 
 /* -----------Amélioration de la partie Escales -----------------------
@@ -214,21 +205,18 @@ escales.forEach(element, function(this){
     });
 })*/
 
-
-
 //--------------RESERVATION-------------------
 
-const reservationButtonJS = document.getElementsByClassName("reservationButton");
+const reservationButtonJS = document.getElementsByClassName('reservationButton');
 console.log(reservationButtonJS);
 
 reservationButtonJS[0].addEventListener('click', () => {
-    alert('trajet réservé !');
+	alert('trajet réservé !');
 });
 
 //-----------------CONTACT---------------------
-const buttonContact = document.querySelector(".buttonContactStyle");
+const buttonContact = document.querySelector('.buttonContactStyle');
 
-buttonContact.addEventListener("click", function(){
-    alert("Sent !");
-})
-
+buttonContact.addEventListener('click', function() {
+	alert('Sent !');
+});
