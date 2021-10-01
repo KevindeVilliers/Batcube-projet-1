@@ -1,207 +1,539 @@
-body{
-    background-color: #4F5053;
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
+body {
+  padding: 0;
+  margin: 0;
+  background: #444f6b;
+}
+
 h2, h3, p, li, div{
-    color: #AE9606;
+  color: #AE9606;
 }
 a {
-    color: red;
+  color: red;
 }
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
+  color: #bfab34;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+}
+
+.batLogo {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  padding: .5rem;
+}
+
+img {max-width:100%;}
+
+.navbarLinks{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.navbarLinks ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.navbarLinks li {
+  list-style: none;
+}
+
+.navbarLinks li a {
+  text-decoration: none;
+  padding: 1rem;
+  color: #bfab34;
+}
+
+.navbarLinks li:hover {
+  list-style: none;
+}
+
+.burgerButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.burgerButton .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #bfab34;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .burgerButton {
+    display: flex;
+  }
+
+  .batLogo{
+    display: block;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  }
+
+  .navbarLinks {
+    width: 100%;
+    display: none;
+  }
+
+  .navbar{
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbarLinks ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbarLinks li {
+    padding: 5px;
+    text-align: center;
+  }
+
+  .navbarLinks li a {
+    padding: 1rem 1rem;
+  }
+
+  .navbarLinks.active{
+    display: flex;
+  }
+}
+
+/* Début caroussel */
+
+div#slider {
+  width: 100%;
+}
+
+.slider{
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 800px;
+  height: 500px;
+}
+
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #b6ab35;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #b6ab35;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid #b6ab35;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #b6ab35;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #b6ab35;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #b6ab35;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #b6ab35;
+}
+@media only screen and (max-width: 480px) {
+  img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  img {
+    width: 100%;
+  }
+}
+
+/* fin caroussel */
+
+
 /*-------------------PARTIE ESCALES--------------------*/
 
 #escales{
-    display : flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    /*border : solid black 2px;*/
+  display : flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  /*border : solid black 2px;*/
 }
 
 
 /* PARTIE LIGNE DE METRO */
 
 #escaleMap{/*container*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 15%;
-    height: 500px;
-    /*border : solid red 1px;*/
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 500px;
+  /*border : solid red 1px;*/
+  
 }
 
 #escaleLine{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 1;
-    width: 0;
-    height: 400px;
-    border: solid #AE9606 2px;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  width: 0;
+  height: 400px;
+  border: solid #AE9606 2px;
+  
 }
 
 #pointContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 2;
-    height: 360px;
- 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  height: 360px;
+
 }
 
 .escalePoint{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #AE9606;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #AE9606;
 
 }
 .escalePoint:hover{
-    width: 46px;
-    height: 46px;
-    background-color: lightgoldenrodyellow;
-    border: solid #AE9606 2px;
+  width: 46px;
+  height: 46px;
+  background-color: lightgoldenrodyellow;
+  border: solid #AE9606 2px;
 }
 
 #titleHoverContainer{/*container*/
-    display: none;
-    width: 10%;
-    height: 500px;
-    /*border: solid green 1px;*/
-    text-align: center;
+  display: none;
+  width: 10%;
+  height: 500px;
+  /*border: solid green 1px;*/
+  text-align: center;
 
 }
 .escaleTitle{
-    position: relative;
-    width: 20%;
-    height: 20%;
+  position: relative;
+  width: 20%;
+  height: 20%;
 }
 
 #stalingradTitle{
-    top : 5%;
+  top : 5%;
 }
 
 #quinconcesTitle{
-    top: 23%;
+  top: 23%;
 }
 
 #hangarsTitle{
-    top: 39%;
+  top: 39%;
 }
 
 #citeDuVinTitle{
-    top: 47%;
+  top: 47%;
 }
 
 #lormontTitle{
-    top: 68%;
+  top: 68%;
 }
 
 
 /* PARTIE TEXTE */
 
 #divEscaleText{/*container*/
-    width: 85%;
-    height: auto;
-    /*border : solid blue 1px;*/
-    
+  width: 85%;
+  height: auto;
+  /*border : solid blue 1px;*/
+  
 }
 
 .escaleTitle{
-    display: none;
+  display: none;
 }
 
 .escaleText{
-    display: none;
+  display: none;
 }
 
 .googleMap{
-    display: block;
-    width : 300px;
-    height : 450px;
+  display: block;
+  width : 300px;
+  height : 450px;
 }
 
 
 @media screen and (min-width: 700px) {
-    #escales{
-        display: block;
-    }
+  #escales{
+      display: block;
+  }
 
 /* PARTIE LIGNE DE METRO */
 
-    #escaleMap{/*container*/
-        display : flex;
-        width: 100%;
-        height: 100px;
-        
-    }
+  #escaleMap{/*container*/
+      display : flex;
+      width: 100%;
+      height: 100px;
+      
+  }
 
-    #escaleLine{
-        width : 90%;
-        height: 0;
-        margin : auto;
-    }
+  #escaleLine{
+      width : 90%;
+      height: 0;
+      margin : auto;
+  }
 
-    #pointContainer{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 2;
-        width: 90%;
-        height: 0;
-        
-    }
+  #pointContainer{
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+      width: 90%;
+      height: 0;
+      
+  }
 
-    .escalePoint{
-        margin: 0;
-    }
+  .escalePoint{
+      margin: 0;
+  }
 
-    #titleHoverContainer{/*container*/
-        display: block;
-        width: 100%;
-        height: 50px
-    }
+  #titleHoverContainer{/*container*/
+      display: block;
+      width: 100%;
+      height: 50px
+  }
 
-    .escaleTitle{
-        width: 20%;
-    }
-    
-    #stalingradTitle{
-        top: 0;
-        left: 1.5%;
-    }
-    
-    #quinconcesTitle{
-        top: 0;
-        left : 21%;
-    }
-    
-    #hangarsTitle{
-        top:0;
-        left : 40.5%;
-    }
+  .escaleTitle{
+      width: 20%;
+  }
+  
+  #stalingradTitle{
+      top: 0;
+      left: 1.5%;
+  }
+  
+  #quinconcesTitle{
+      top: 0;
+      left : 21%;
+  }
+  
+  #hangarsTitle{
+      top:0;
+      left : 40.5%;
+  }
 
-    #citeDuVinTitle{
-        top:0;
-        left: 59%;
-    }
+  #citeDuVinTitle{
+      top:0;
+      left: 59%;
+  }
 
-    #lormontTitle{
-        top:0;
-        left: 78.5%;
-    }
+  #lormontTitle{
+      top:0;
+      left: 78.5%;
+  }
 
 /* PARTIE TEXTE */
 
-    #divEscaleText{ /*container*/
-        width: 100%;
-        min-height: 500px;
-        display: flex;
-        justify-content: flex-start;
-    }
-    .textOnly{
-        width: 500px;
-    }
+  #divEscaleText{ /*container*/
+      width: 100%;
+      min-height: 500px;
+      display: flex;
+      justify-content: flex-start;
+  }
+  .textOnly{
+      width: 500px;
+  }
+}
+/*---------------FORMULAIRE---------------------*/
+
+.formTitle, .titleContact {
+  text-align: center;
+  color:#bfab34;
+}
+
+#formReservation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.horaire, .personInfo, .timeChoice {
+ 
+    display: flex;
+    background-color: #a1a7b5;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.reservationButton{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+  display:flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  margin-top:2%;
+  font-size: 20px;
+}
+
+.form input{
+  padding: 0.8% 0% 0.8% 0%;
+}
+
+.form input:hover {
+  background-color: #fdff00;
+}
+
+
+
+
+textarea:hover {
+  background-color: #fdff00;
+}
+
+/*-------------------CONTACT------------------*/
+
+.buttonContact{
+  margin-left: 80%;
+  width: 15%;
+}
+
+.buttonContactStyle{
+  background-color: #988829;
+}
+
+.buttonContact input{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.buttonContactStyle:hover{
+  background-color: #fdff00;
+}
+
+
+label {
+  color: #988829;
+}
+
+footer{    
+  height: 150px;
+  margin-top: 20px;
+  background-image: linear-gradient(to top, #242424, #282e3c, #505c7c) ;
+  
+}
+
+.wildLogo{
+  margin-left: 44%;
+  margin-top: 30px;
 }
