@@ -3,6 +3,9 @@
 	--text-color-dark: #ae9606;
 	--link-color-dark: #fdff00;
 	--block-color-dark: #242424;
+  --body-block-color-light : white;
+  --text-color-light : #242424;
+  --linl-color-light : blue;
 }
 
 * {
@@ -44,6 +47,13 @@ a {
 	padding: 1vh 3vh;
 	margin: 3vw;
 	border-radius: 10px;
+  transition-duration: 1000ms;
+}
+
+.block:hover{
+  transform: translate(-0.5vh,-1vh);
+  box-shadow: 5px 5px 5px var(--block-color-dark);
+  transition-duration: 500ms;
 }
 
 /* Début navbar */
@@ -578,4 +588,22 @@ footer {
 
 .tbmLogo, .wildLogo{
   margin : 25px
+}
+
+.tbmLogo:hover, .wildLogo:hover{
+  animation-name: twist-anim;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes twist-anim {
+  25%{
+    transform: rotate(14deg);
+  }
+  50%{
+    transform: rotate(-14deg);
+  }
+  75%{
+    transform: rotate(14deg);
+  }
 }
