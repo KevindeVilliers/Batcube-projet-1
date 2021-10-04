@@ -1,11 +1,23 @@
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  
 }
 body {
   padding: 0;
   margin: 0;
   background: #444f6b;
+  margin-top: 100px;
+}
+
+/* decalage vertical navbar quand click sur un lien pour compenser hauteur navbar */
+:target{
+  padding-top:70px;
+}
+
+/* smooth scroll*/
+html {
+  scroll-behavior: smooth;
 }
 
 h2,
@@ -15,17 +27,19 @@ li,
 div {
   color: #ae9606;
 }
+
 a {
   color: red;
 }
 
+/* Début navbar */
 .navbar {
   display: flex;
   justify-content: center;
   background-color: #242424;
   color: #bfab34;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
+  position: fixed;
+  top: 0;
   width: 100%;
   z-index: 10;
 }
@@ -36,6 +50,11 @@ a {
   align-items: center;
   width: 150px;
   padding: 0.5rem;
+  transition: transform 0.7s ease-in-out;
+}
+
+.batLogo:hover {
+  transform: rotate(360deg);
 }
 
 img {
@@ -93,7 +112,14 @@ img {
   margin: auto;
 }
 
+/* Partie responsive Navbar */
+
 @media screen and (max-width: 600px) {
+  /* decalage vertical navbar quand click sur un lien pour compenser hauteur menu deroulant */
+  :target{
+    padding-top:200px;
+  }
+
   .burgerButton {
     display: flex;
   }
@@ -107,7 +133,15 @@ img {
 
   .navbarLinks {
     width: 100%;
-    display: none;
+    position: absolute;
+    opacity: 0;
+    background-color: #242424;
+    transition: all 0.7s ease-in-out;
+  }
+
+  .navbarLinks.active {
+    transition: all 0.7s ease-in-out;
+    opacity: 1;
   }
 
   .navbar {
@@ -131,16 +165,13 @@ img {
     padding: 1rem 1rem;
   }
 
-  .navbarLinks.active {
-    display: flex;
-  }
-
   .centerContent {
     width: 98vw;
-      margin: auto;
+    margin: auto;
   }
 }
 
+/* Fin navbar */
 /* Début caroussel */
 
 #slider {
@@ -436,6 +467,7 @@ img {
     width: 500px;
   }
 }
+
 /*---------------FORMULAIRE---------------------*/
 
 .formTitle,
@@ -516,9 +548,9 @@ label {
 
 footer {
   height: 150px;
-    display: flex;
-    margin-top: 20px;
-    background-image: linear-gradient(to top, #242424, #282e3c, #505c7c);
-    justify-content: center;
-    align-items: flex-end;
+  display: flex;
+  margin-top: 20px;
+  background-image: linear-gradient(to top, #242424, #282e3c, #505c7c);
+  justify-content: center;
+  align-items: flex-end;
 }

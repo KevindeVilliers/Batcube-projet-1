@@ -4,7 +4,7 @@ const burgerButtonJS = document.querySelector('.burgerButton');
 const navbarLinksJS = document.querySelector('.navbarLinks');
 
 burgerButtonJS.addEventListener('click', () => {
-	navbarLinksJS.classList.toggle('active');
+	navbarLinksJS.classList.toggle('active')
 });
 
 // ----------------------- ESCALES ------------------------
