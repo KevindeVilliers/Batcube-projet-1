@@ -12,7 +12,7 @@ burgerButtonJS.addEventListener('click', () => {
 //Mise en place des variables des classes pour comportements généralisés
 const escaleText = document.querySelectorAll('.escaleText');
 
-//HANGARS -------------------------------
+
 function initEscales(titleElement, bubbleElement, contentElement) {
 	// Apparition/Disparition du titre au passage de la souris
 	bubbleElement.addEventListener('mouseover', function(event) {
@@ -51,7 +51,7 @@ escales.forEach(function(escale) {
 	);
 });
 
-/* -----------Amélioration de la partie Escales ----------------------- */
+
 
 //--------------RESERVATION-------------------
 
