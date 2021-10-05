@@ -1,3 +1,36 @@
+//--------------DARKMODE--------------------
+let isDark = false;
+//const switchMode = document.getElementById(/switch container/);
+//const switchSelector =document.getElementById(/switch selector/);
+const root = document.querySelector(":root");
+const batLogo = document.getElementById("batLogo");
+const tbmLogo = document.querySelector(".tbmLogo");
+const wildLogo = document.querySelector(".wildLogo");
+//switchMode.addEventListener("click", ()=>{
+	if (!isDark){	
+		//isDark = true;
+		root.style.setProperty('--body-color', '#4f5053', 'important');
+		root.style.setProperty('--text-color', '#ae9606', 'important');
+		root.style.setProperty('--link-color', '#fdff00', 'important');
+		root.style.setProperty('--block-color', '#242424', 'important');
+		root.style.setProperty('--shadow-color', '#242424', 'important');
+		batLogo.src = "src/BatCubeLogoDark.png";
+		tbmLogo.src = "src/TBMLogoDark.png";
+		wildLogo.src = "src/WildLogoDark.png";
+	} else {
+		//isDark = false;
+		root.style.setProperty('--body-color', 'white', 'important');
+		root.style.setProperty('--text-color', '#242424', 'important');
+		root.style.setProperty('--link-color', 'blue', 'important');
+		root.style.setProperty('--block-color', 'lightgrey', 'important');
+		root.style.setProperty('--shadow-color', '#777777', 'important');
+		batLogo.src = "src/BatCubeLogoLight.png";
+		tbmLogo.src = "src/TBMLogoLight.png";
+		wildLogo.src = "src/WildLogoLight.png";
+	}
+//})
+
+
 //--------------NAVBAR--------------------
 
 const burgerButtonJS = document.querySelector('.burgerButton');
