@@ -15,13 +15,13 @@ body {
 	padding: 0;
 	margin: 0;
 	background-color: var(--body-color);
-	margin-top: 100px;
 }
 
 /* decalage vertical navbar quand click sur un lien pour compenser hauteur navbar */
 :target {
 	padding-top: 70px;
 }
+
 
 /* smooth scroll*/
 html {

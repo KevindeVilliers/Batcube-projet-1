@@ -18,18 +18,17 @@
   </head>
 
   <body>
-    <nav class="navbar">
-      <div class="batLogo">
-        <img src="src/BatCubeLogoDark.png" alt="batLogo" id="batLogo"/>
+    <nav class="navbar" >
+      <div class="batLogo" >
+        <a href="#top"><img src="src/BatCubeLogoDark.png" alt="batLogo" id="batLogo" /></a>
       </div>
-
+    
       <a href="#" class="burgerButton">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </a>
       <div class="navbarLinks">
-
         <ul>
           <li><a href="#infos">Infos</a></li>
           <li><a href="#escales">Escales</a></li>
@@ -82,7 +81,8 @@
 
     <div class="centerContent">
       <!------------------------ Infos---------------------->
-      <div class="block" id="infos">
+      <section id="infos">
+        <div class="block">
         <p>
           <b>Partie intégrante du réseau de transport de Bordeaux Métropole, le
             BAT3
@@ -98,9 +98,10 @@
             Stalingrad, Quinconces et La Cité du Vin.</b>
         </p>
       </div>
-
+    </section>
+  
       <!--------------------- Escales------------------------>
-
+      <section id="escales">
       <div class="block">
         <h2>2 catamarans, 7 jours sur 7</h2>
         <p>
@@ -113,7 +114,7 @@
           LES
           HANGARS, LA CITÉ DU VIN ET LORMONT BAS et de multiples connexions
         </p>
-        <div id="escales">
+        
           <div id="titleHoverContainer">
             <div class="escaleTitle" id="stalingradTitle">Escale à STALINGRAD<br>Ponton
               Yves Parlier</div>
@@ -381,9 +382,10 @@
 
       </div>
 
-
+    </section>
       <!-------------------- FORMULAIRE DE RESERVATION---------------------------->
-      <div class="block" id="reservation">
+      <section id="reservation">
+      <div class="block">
         <h1 class="formTitle">Formulaire de réservation</h1>
         <div class="form" id="formReservation">
           <form action="" method="get">
@@ -434,9 +436,11 @@
           <button type="submit" id="reservButton">Réserver</button>
         </div>
       </div>
+    </section>
       <!-----------------------------CONTACT------------------------------------->
+      <section id="contact">
       <div class="block">
-        <section id="contact">
+        
 
           <h2 class="titleContact">Contact</h2>
 
