@@ -54,6 +54,29 @@ a {
 	transition-duration: 500ms;
 }
 
+/*----------SwitchMode---------------*/
+#switchContainer{
+	position: fixed; /* Set the navbar to fixed position */
+	top: 68px;
+	left : 20px;
+	z-index: 999;
+	width: 50px;
+	height: 25px;
+	border: solid var(--text-color) 2px;
+	border-radius: 50px;
+	display : flex;
+	flex-direction: row-reverse;
+}
+#switchSelector{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: var(--text-color);
+	border : solid var(--block-color) 1px;
+	margin : 0 1px 0 1px;
+	
+}
+
 /* Début navbar */
 .navbar {
 	display: flex;
@@ -188,7 +211,7 @@ img {
 		padding: 1rem 1rem;
 	}
 
-	.centerContent {
+	.centerContent { /*-------??????????????????????????????*/
 		width: 98vw;
 		margin: auto;
 	}
@@ -299,11 +322,11 @@ img {
 
 /*-------------------PARTIE ESCALES--------------------*/
 
-#escales {
+#divActiv {
 	display: flex;
 	flex-direction: row-reverse;
 	width: 100%;
-	/*border : solid black 2px;*/
+	/*border : solid white 2px;*/
 }
 
 /* PARTIE LIGNE DE METRO */
@@ -313,7 +336,7 @@ img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 15%;
+	width: 20%;
 	height: 500px;
 	/*border : solid red 1px;*/
 }
@@ -379,7 +402,7 @@ img {
 
 #divEscaleText {
 	/*container*/
-	width: 85%;
+	width: 80%;
 	height: auto;
 	/*border : solid blue 1px;*/
 }
@@ -401,7 +424,7 @@ img {
 }
 
 @media screen and (min-width: 700px) {
-	#escales {
+	#divActiv {
 		display: block;
 	}
 

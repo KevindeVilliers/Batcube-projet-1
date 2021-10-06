@@ -1,14 +1,13 @@
-//--------------DARKMODE--------------------
+//--------------SWITCHMODE--------------------
 let isDark = false;
-//const switchMode = document.getElementById(/switch container/);
-//const switchSelector =document.getElementById(/switch selector/);
+const switchMode = document.getElementById("switchContainer");
 const root = document.querySelector(":root");
 const batLogo = document.getElementById("batLogo");
 const tbmLogo = document.querySelector(".tbmLogo");
 const wildLogo = document.querySelector(".wildLogo");
-//switchMode.addEventListener("click", ()=>{
+switchMode.addEventListener("click", ()=>{
 	if (!isDark){	
-		//isDark = true;
+		isDark = true;
 		root.style.setProperty('--body-color', '#4f5053', 'important');
 		root.style.setProperty('--text-color', '#ae9606', 'important');
 		root.style.setProperty('--link-color', '#fdff00', 'important');
@@ -17,8 +16,10 @@ const wildLogo = document.querySelector(".wildLogo");
 		batLogo.src = "src/BatCubeLogoDark.png";
 		tbmLogo.src = "src/TBMLogoDark.png";
 		wildLogo.src = "src/WildLogoDark.png";
+		switchMode.style.flexDirection = "row-reverse";
+
 	} else {
-		//isDark = false;
+		isDark = false;
 		root.style.setProperty('--body-color', 'white', 'important');
 		root.style.setProperty('--text-color', '#242424', 'important');
 		root.style.setProperty('--link-color', 'blue', 'important');
@@ -27,8 +28,9 @@ const wildLogo = document.querySelector(".wildLogo");
 		batLogo.src = "src/BatCubeLogoLight.png";
 		tbmLogo.src = "src/TBMLogoLight.png";
 		wildLogo.src = "src/WildLogoLight.png";
+		switchMode.style.flexDirection = "row";
 	}
-//})
+})
 
 
 //--------------NAVBAR--------------------
