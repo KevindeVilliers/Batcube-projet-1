@@ -636,14 +636,14 @@ footer {
 	}
 }
 
-
+/* feature avis */
 #containerAvis {
     background-color: var(--body-color);
-    height: 400px;
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
+	margin-top: 100px;
 }
 
 #avis {
@@ -652,7 +652,6 @@ footer {
     width: 25%;
     color: var(--text-color);
     border-radius: 10px;
-    height: 130px;
 
 }
 #divImg {
@@ -680,19 +679,13 @@ footer {
 @media screen and (max-width: 1200px) {
 
     #containerAvis {
-        background-color: var(--body-color);
-        height: 400px;
-        display: flex;
         flex-direction: column;
-        width: 100%;
-        justify-content: space-around;
-        align-items: center;
+		margin-top: 0;
     }
 
     #avis{
         margin-top: 80px;
         width: 50%;
-        height: 180px;
     }
 
 }
