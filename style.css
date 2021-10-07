@@ -18,7 +18,7 @@ body {
 }
 
 /* decalage vertical navbar quand click sur un lien pour compenser hauteur navbar */
-:target {
+section:target {
 	padding-top: 70px;
 }
 
@@ -86,7 +86,7 @@ a {
 	position: fixed; /* Set the navbar to fixed position */
 	top: 0; /* Position the navbar at the top of the page */
 	width: 100%;
-	z-index: 10;
+	z-index: 30;
 	box-shadow: 0px 5px 5px var(--shadow-color);
 }
 
@@ -103,7 +103,7 @@ a {
 	transform: rotate(360deg);
 }
 
-img {
+.navbar img {
 	max-width: 100%;
 }
 
@@ -194,7 +194,7 @@ img {
 		display: block;
 		flex-direction: column;
 		align-items: flex-start;
-		z-index: 10;
+		z-index: 30;
 	}
 
 	.navbarLinks ul {
@@ -218,107 +218,68 @@ img {
 }
 
 /* Fin navbar */
-/* Début caroussel */
 
-#slider {
+/*--------Carousel Start---------*/
+#blockContainerCarousel {
+	width: 75vw;
+	height: 58vw;
+	max-width: 700px;
+	max-height: 500px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin:  60px auto 0 auto;
+}
+
+#containerCarousel {
+	z-index: 10;
+	display: flex;
+	width: 75vw;
+	height: 50vw;
+	max-width: 700px;
+	max-height: 500px;
+	border-radius: 10px;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+}
+
+.pictureCarousel {
 	width: 100%;
 }
 
-.slider {
-	width: 800px;
-	height: 500px;
-	border-radius: 10px;
-	overflow: hidden;
-	margin: auto;
-	margin-top: 100px;
+.pictureCarousel img {
+	height: 100%;
+	margin: none;
 }
 
-.slides {
-	width: 500%;
-	height: 500px;
-	display: flex;
-}
-
-.slides input {
-	display: none;
-}
-
-.slide {
-	width: 20%;
-	transition: 2s;
-}
-
-.slide img {
-	width: 800px;
-	height: 500px;
-}
-
-.navigation-manual {
-	position: absolute;
-	width: 800px;
-	margin-top: -40px;
+.selectZone {
+	position: relative;
+	bottom: 4vh;
+	z-index: 20;
 	display: flex;
 	justify-content: center;
 }
 
-.manual-btn {
-	border: 2px solid var(--text-color);
-	padding: 5px;
-	border-radius: 10px;
-	cursor: pointer;
-	transition: 1s;
+.selectPoint {
+	width: 16px;
+	height: 16px;
+	border: solid black 3px;
+	border-radius: 50%;
+	transition: 500ms;
+	margin: 4px;
 }
 
-.manual-btn:not(:last-child) {
-	margin-right: 40px;
+.selectPoint:hover {
+	background-color: black;
+	transition: 500ms;
 }
 
-.manual-btn:hover {
-	background: var(--text-color);
-}
+/*--------Carousel End---------*/
 
-#radio1:checked ~ .first {
-	margin-left: 0;
-}
-
-#radio2:checked ~ .first {
-	margin-left: -20%;
-}
-
-#radio3:checked ~ .first {
-	margin-left: -40%;
-}
-
-#radio4:checked ~ .first {
-	margin-left: -60%;
-}
-
-.navigation-auto {
-	position: absolute;
-	display: flex;
-	width: 800px;
-	justify-content: center;
-	margin-top: 460px;
-}
-
-.navigation-auto div {
-	border: 2px solid var(--text-color);
-	padding: 5px;
-	border-radius: 10px;
-	transition: 1s;
-}
-
-.navigation-auto div:not(:last-child) {
-	margin-right: 40px;
-}
-
-@media only screen and (max-width: 480px) {
-	img {
-		width: 100%;
-	}
-}
-
-/* fin caroussel */
 
 /*-------------------PARTIE ESCALES--------------------*/
 
@@ -652,7 +613,8 @@ footer {
     width: 25%;
     color: var(--text-color);
     border-radius: 10px;
-
+	padding: 20px;
+	text-align: center;
 }
 #divImg {
     display: flex;
@@ -668,7 +630,6 @@ footer {
     background-color: var(--block-color);
     position: relative;
     top: -50px;
-
 }
 #textAvis {
     position: relative;
@@ -688,4 +649,60 @@ footer {
         width: 50%;
     }
 
+}
+.starContainer{
+	display: flex;
+	justify-content: space-around;
+	width : 140px;
+	height: 25px;
+	margin: 10px auto;
+}
+
+.starDiv{
+	height: 25px;
+}
+
+.star{
+	height: 100%;
+}
+
+.tram{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	text-align: center;
+	color: white;
+	border : solid var(--block-color) 1px;
+}
+.bus{
+	display: inline-block;
+	width: 25px;
+	height: 20px;
+	text-align: center;
+	color: white;
+	border : solid var(--block-color) 1px;
+}
+#a{
+	background-color: #831f82;
+}
+
+#b{
+	background-color: #e50140;
+}
+
+#c{
+	background-color: #d34f98;
+}
+
+#blueBus{
+	background-color: #0188cc;
+}
+
+#orangeBus{
+	background-color: #f07d00;
+}
+
+#greenBus{
+	background-color: #7d9a2e;
 }

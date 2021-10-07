@@ -40,41 +40,37 @@
     </nav>
 
     <!--début caroussel-->
-    <div class="slider">
-      <div class="slides">
-        <input type="radio" name="radio-btn" id="radio1">
-        <input type="radio" name="radio-btn" id="radio2">
-        <input type="radio" name="radio-btn" id="radio3">
-        <input type="radio" name="radio-btn" id="radio4">
+    <div id="blockContainerCarousel">
+      <div id="containerCarousel">
 
-        <div class="slide first">
-          <img src="http://p9.storage.canalblog.com/92/25/423276/87387478_o.jpg"
-            alt="Bat3">
-        </div>
-        <div class="slide">
-          <img
-            src="https://p4.storage.canalblog.com/47/25/423276/85139338_o.jpg"
-            alt="Bat3">
-        </div>
-        <div class="slide">
-          <img
-            src="https://www.keolis.com/sites/default/files/thumbnails/image/ld-keolis-navette-maritime-bordeaux_0.jpg"
-            alt="Bat3">
-        </div>
-        <div class="slide">
-          <img
-            src="https://www.infotbm.com/sites/default/files/styles/heading/public/medias/images/2018-04/comment_ca_marche_0.jpg?itok=bnTUV9Fx"
-            alt="Bat3">
-        </div>
+          <div class="pictureCarousel" id="pic1">
+              <img
+                  src="http://p9.storage.canalblog.com/92/25/423276/87387478_o.jpg"
+                  alt="Bat3">
+          </div>
+          <div class="pictureCarousel" id="pic2">
+              <img
+                  src="https://p4.storage.canalblog.com/47/25/423276/85139338_o.jpg"
+                  alt="Bat3">
+          </div>
+          <div class="pictureCarousel" id="pic3">
+              <img
+                  src="https://www.keolis.com/sites/default/files/thumbnails/image/ld-keolis-navette-maritime-bordeaux_0.jpg"
+                  alt="Bat3">
+          </div>
+          <div class="pictureCarousel" id="pic4">
+              <img
+                  src="https://www.infotbm.com/sites/default/files/styles/heading/public/medias/images/2018-04/comment_ca_marche_0.jpg?itok=bnTUV9Fx"
+                  alt="Bat3">
+          </div>
       </div>
-
-      <div class="navigation-manual">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
+      <div class="selectZone">
+          <a href="#pic1"><div class="selectPoint"></div></a>
+          <a href="#pic2"><div class="selectPoint"></div></a>
+          <a href="#pic3"><div class="selectPoint"></div></a>
+          <a href="#pic4"><div class="selectPoint"></div></a>
       </div>
-    </div>
+  </div>
     <!--fin caroussel-->
 
     <!-----------------SwitchMode------------------>
@@ -158,17 +154,17 @@
                   Correspondances depuis le ponton :<br>
                   <br>
                   Tram<br>
-                  A.jpg station Stalingrad<br>
+                  <span class="tram" id="a"> A </span> station Stalingrad<br>
                   <br>
                   Bus<br>
-                  10 arrêt Stalingrad<br>
-                  27 arrêt Stalingrad<br>
-                  28 arrêt Stalingrad<br>
-                  45 arrêt Lavigne<br>
-                  62 arrêt Stalingrad<br>
-                  80 arrêt Stalingrad<br>
-                  91 arrêt Gare d’Orléans<br>
-                  92 arrêt Gare d’Orléans<br>
+                  <span class="bus" id="blueBus">10</span> arrêt Stalingrad<br>
+                  <span class="bus" id="orangeBus">27</span> arrêt Stalingrad<br>
+                  <span class="bus" id="orangeBus"> 28 </span> arrêt Stalingrad<br>
+                  <span class="bus" id="greenBus"> 45 </span> arrêt Lavigne<br>
+                  <span class="bus" id="greenBus"> 62 </span> arrêt Stalingrad<br>
+                  <span class="bus" id="greenBus"> 80 </span> arrêt Stalingrad<br>
+                  <span class="bus" id="greenBus"> 91 </span> arrêt Gare d’Orléans<br>
+                  <span class="bus" id="greenBus"> 92 </span> arrêt Gare d’Orléans<br>
                   <br>
                   V3, vélos en libre-service<br>
                   Station Gare d’Orléans<br>
@@ -209,16 +205,16 @@
                   Correspondances depuis le ponton :<br>
                   <br>
                   Tram<br>
-                  B station Quinconces<br>
-                  C station Quinconces<br>
+                  <span class="tram" id="b"> B </span> station Quinconces<br>
+                  <span class="tram" id="c"> C </span> station Quinconces<br>
                   <br>
                   Bus<br>
-                  2 arrêt Pôle d'echanges Quinconces<br>
-                  3 arrêt Pôle d'echanges Quinconces<br>
-                  6 arrêt Pôle d'echanges Quinconces<br>
-                  26 arrêt Pôle d'echanges Quinconces<br>
-                  29 arrêt Pôle d'echanges Quinconces<br>
-                  47 arrêt Pôle d'echanges Quinconces<br>
+                  <span class="bus" id="blueBus">2</span> arrêt Pôle d'echanges Quinconces<br>
+                  <span class="bus" id="blueBus">3</span> arrêt Pôle d'echanges Quinconces<br>
+                  <span class="bus" id="blueBus">6</span> arrêt Pôle d'echanges Quinconces<br>
+                  <span class="bus" id="orangeBus">26</span> arrêt Pôle d'echanges Quinconces<br>
+                  <span class="bus" id="orangeBus"> 29 </span> arrêt Pôle d'echanges Quinconces<br>
+                  <span class="bus" id="greenBus"> 47 </span> arrêt Pôle d'echanges Quinconces<br>
                   <br>
                   V3, vélos en libre-service<br>
                   Station Gare d’Orléans<br>
@@ -254,10 +250,10 @@
                   Correspondances depuis le ponton :<br>
                   <br>
                   Tram<br>
-                  B station Cours du Médoc<br>
+                  <span class="tram" id="b"> B </span> station Cours du Médoc<br>
                   <br>
                   Bus<br>
-                  45 arrêt Cours du Médoc<br>
+                  <span class="bus" id="greenBus"> 45 </span> arrêt Cours du Médoc<br>
                   <br>
                   V3, vélos en libre-service<br>
                   Station Cours du Médoc<br>
@@ -282,12 +278,12 @@
                   Correspondances depuis le ponton :<br>
                   <br>
                   Tram<br>
-                  B station La Cité du Vin<br>
+                  <span class="tram" id="b"> B </span> station La Cité du Vin<br>
                   <br>
                   Bus<br>
-                  7 arrêt La Cité du Vin<br>
-                  32 arrêt La Cité du Vin<br>
-                  45 arrêt La Cité du Vin<br>
+                  <span class="bus" id="blueBus">7</span> arrêt La Cité du Vin<br>
+                  <span class="bus" id="orangeBus">32</span> arrêt La Cité du Vin<br>
+                  <span class="bus" id="greenBus">45</span> arrêt La Cité du Vin<br>
                   <br>
                   V3, vélos en libre-service<br>
                   Station Bassins à Flots<br>
@@ -312,10 +308,10 @@
                   Correspondances depuis le ponton :<br>
                   <br>
                   Bus<br>
-                  7 arrêt Lormont Bas<br>
-                  40 arrêt Lormont Bas<br>
-                  91 arrêt Lormont Bas<br>
-                  92 arrêt Lormont Bas<br>
+                  <span class="bus" id="blueBus">7</span> arrêt Lormont Bas<br>
+                  <span class="bus" id="greenBus">40</span> arrêt Lormont Bas<br>
+                  <span class="bus" id="greenBus">91</span> arrêt Lormont Bas<br>
+                  <span class="bus" id="greenBus">92</span> arrêt Lormont Bas<br>
 
                 </p>
               </div>
@@ -497,6 +493,13 @@
             <p id="textAvis">
               Amazing trip with my friends Axel, Basile, Ozkan and Kevin ! What a great team
             </p>
+            <div class="starContainer">
+              <div class="starDiv"><img src="src/starFull.png" alt="star" class="star"></div>
+              <div class="starDiv"><img src="src/starFull.png" alt="star" class="star"></div>
+              <div class="starDiv"><img src="src/starFull.png" alt="star" class="star"></div>
+              <div class="starDiv"><img src="src/starFull.png" alt="star" class="star"></div>
+              <div class="starDiv"><img src="src/starFull.png" alt="star" class="star"></div>
+            </div>
         </div>
         <div id="avis">
           <div id="divImg">
