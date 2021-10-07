@@ -438,7 +438,9 @@
     <section id="reservation">
       <div class="block">
         <h1 class="formTitle">Formulaire de réservation</h1>
-        <div class="form" id="formReservation">
+
+        <div class="form">
+
           <form action="" method="get">
 
             <div class="personInfo">
@@ -454,7 +456,13 @@
               <label for="phone">Your Phone</label>
               <input type="tel" placeholder="0698765432" required />
             </div>
+          </form>
+
+
+          <div class="formRow">
+
             <div class="timeChoice">
+
               <label>Arrêt de départ</label>
               <select>
                 <option value="">Arrêt de départ</option>
@@ -464,6 +472,7 @@
                 <option>Arret D</option>
                 <option>Arret E</option>
               </select>
+
               <label>Arrêt d'arrivée</label>
               <select>
                 <option value="">Arrêt d'arrivée</option>
@@ -473,15 +482,21 @@
                 <option>Arret D</option>
                 <option>Arret E</option>
               </select>
+
             </div>
-            <div class="horaire">
+
+            <div class="jourDepart">
+
               <label for="departureDay">Jour de départ</label>
               <input type="date" required />
               <label for="departureTime">Heure de départ</label>
               <input type="time" step="900" required />
             </div>
+
+          </div>
+
         </div>
-        </form>
+
         <div class="reservationButton">
           <button type="submit" id="reservButton">Réserver</button>
         </div>
@@ -496,29 +511,38 @@
 
         <div class="contact">
 
-          <form action="" class="form">
+          <form action="">
 
-            <div class="form">
+            <div class="form2">
               <label for="name">Name: </label>
               <input type="text" name="name" id="name" size="160" maxlength="40" placeholder="Ex: Bill Gates">
             </div>
 
-            <div class="form">
+            <div class="form2">
               <label for="email">E-mail: </label>
               <input type="email" name="email" id="email" size="160" maxlength="70" placeholder="@">
             </div>
 
-            <div class="form">
+            <div class="form2">
               <label for="objet">Objet: </label>
               <input type="text" name="objet" id="objet" size="160" maxlength="50" placeholder="Ex: Buy ticket">
             </div>
 
-            <div class="form">
+            <div class="form2">
               <label for="message">Your message: </label>
               <textarea name="message" id="message" rows="10" cols="180" maxlength="300"
                 placeholder="Ex: Where can I buy a ticket ?">
                 </textarea>
             </div>
+
+            <div class="form2 buttonContact">
+              <input type="submit" value="Send" class="buttonContactStyle">
+            </div>
+
+        </div>
+        </form>
+      </div>
+  </div>
 
             <div class="form buttonContact">
               <input type="submit" value="Send" class="buttonContactStyle">
