@@ -607,14 +607,13 @@ footer {
 	margin-top: 100px;
 }
 
-#avis {
+.avis {
     background-color: var(--block-color);
     display: block;
     width: 25%;
     color: var(--text-color);
     border-radius: 10px;
-	padding: 20px;
-	text-align: center;
+
 }
 #divImg {
     display: flex;
@@ -630,6 +629,7 @@ footer {
     background-color: var(--block-color);
     position: relative;
     top: -50px;
+
 }
 #textAvis {
     position: relative;
@@ -644,19 +644,26 @@ footer {
 		margin-top: 0;
     }
 
-    #avis{
+    .avis{
         margin-top: 80px;
-        width: 50%;
+        width: 90%;
     }
+	#textAvis {
+		display: flex;
+		justify-content: center;
+	}
 
 }
-.starContainer{
+
+.starscontainer{
 	display: flex;
-	justify-content: space-around;
-	width : 140px;
-	height: 25px;
-	margin: 10px auto;
-}
+	justify-content: center;
+	padding-bottom: 10px;
+  }
+
+.checked{
+	color: yellow;
+  }
 
 .starDiv{
 	height: 25px;
