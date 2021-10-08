@@ -194,6 +194,7 @@ a {
 	.navbarLinks.active {
 		transition: all 0.7s ease-in-out;
 		opacity: 1;
+		pointer-events: initial;
 	}
 
 	.navbar {
