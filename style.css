@@ -188,6 +188,7 @@ a {
 		opacity: 0;
 		background-color: var(--block-color);
 		transition: all 0.7s ease-in-out;
+		pointer-events: none;
 	}
 
 	.navbarLinks.active {
