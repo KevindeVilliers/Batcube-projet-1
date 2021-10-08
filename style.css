@@ -167,7 +167,7 @@ a {
 
 @media screen and (max-width: 600px) {
 	/* decalage vertical navbar quand click sur un lien pour compenser hauteur menu deroulant */
-	:target {
+	.navbar a:target {
 		padding-top: 200px;
 	}
 
@@ -281,6 +281,16 @@ a {
 .selectPoint:hover {
 	background-color: black;
 	transition: 500ms;
+}
+
+.selectZone a:target{
+	margin-top: 100px;
+}
+
+@media screen and (max-width: 600px) {
+	#blockContainerCarousel {
+		margin-top: 10vh;
+	}
 }
 
 /*--------Carousel End---------*/
