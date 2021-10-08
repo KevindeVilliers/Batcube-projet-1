@@ -15,6 +15,7 @@ body {
 	padding: 0;
 	margin: 0;
 	background-color: var(--body-color);
+	overflow-x: 0;
 }
 
 /* decalage vertical navbar quand click sur un lien pour compenser hauteur navbar */
@@ -549,11 +550,9 @@ textarea:hover {
 .reservationButton {
 	padding-top: 10px;
 	display: flex;
-	width: 120%;
 	height: 60px;
 	justify-content: center;
 	align-items: center;
-	padding-right: 25%;
 }
 
 #reservButton {
